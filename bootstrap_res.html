@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Responsive Demo</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  body { padding-top: 70px; }
+  .hero { background: linear-gradient(135deg,#6a11cb,#2575fc); color:#fff; padding: 60px 0; }
+  .demo-box { background:#e9ecef; border:1px solid #ced4da; border-radius:.5rem; padding:1rem; text-align:center; }
+  .breakpoint-badge { position: fixed; bottom: 15px; right: 15px; z-index: 1050; }
+  footer { background:#212529; color:#adb5bd; padding: 30px 0; margin-top: 40px; }
+</style>
+</head>
+<body>
+
+<!-- ===== Navbar: collapses into a hamburger menu on small screens ===== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">BootstrapDemo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#grid">Grid</a></li>
+        <li class="nav-item"><a class="nav-link" href="#cards">Cards</a></li>
+        <li class="nav-item"><a class="nav-link" href="#utilities">Utilities</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== Hero section ===== -->
+<header id="hero" class="hero text-center">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Learn Bootstrap Responsiveness</h1>
+    <p class="lead">Resize your browser window (or open on your phone) to see everything below adapt automatically.</p>
+    <a href="#grid" class="btn btn-light btn-lg mt-2">See it in action &darr;</a>
+  </div>
+</header>
+
+<div class="container my-5">
+
+  <!-- ===== Explanation ===== -->
+  <div class="row mb-5">
+    <div class="col-12">
+      <h2>How Bootstrap's Grid Works</h2>
+      <p>Bootstrap divides each row into <strong>12 columns</strong>. You tell each element how many columns to take up at different screen sizes using classes like <code>col-sm-*</code>, <code>col-md-*</code>, <code>col-lg-*</code>. The breakpoints are:</p>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-dark">
+            <tr><th>Class prefix</th><th>Screen width</th><th>Typical device</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>col-</code></td><td>&lt;576px</td><td>Extra small (phones)</td></tr>
+            <tr><td><code>col-sm-</code></td><td>&ge;576px</td><td>Small (large phones)</td></tr>
+            <tr><td><code>col-md-</code></td><td>&ge;768px</td><td>Medium (tablets)</td></tr>
+            <tr><td><code>col-lg-</code></td><td>&ge;992px</td><td>Large (laptops)</td></tr>
+            <tr><td><code>col-xl-</code></td><td>&ge;1200px</td><td>Extra large (desktops)</td></tr>
+            <tr><td><code>col-xxl-</code></td><td>&ge;1400px</td><td>Extra extra large</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Grid demo ===== -->
+  <div id="grid" class="row mb-5">
+    <div class="col-12 mb-3">
+      <h2>1. Live Grid Demo</h2>
+      <p>Each box below is set to <code>col-6 col-md-4 col-lg-3</code>. That means: 2 per row on phones, 3 per row on tablets, 4 per row on laptops+. Try resizing!</p>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 mb-3">
+      <div class="demo-box">col-6 col-md-4 col-lg-3</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 mb-3">
+      <div class="demo-box">col-6 col-md-4 col-lg-3</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 mb-3">
+      <div class="demo-box">col-6 col-md-4 col-lg-3</div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-3 mb-3">
+      <div class="demo-box">col-6 col-md-4 col-lg-3</div>
+    </div>
+  </div>
+
+  <!-- ===== Cards demo ===== -->
+  <div id="cards" class="row mb-5">
+    <div class="col-12 mb-3">
+      <h2>2. Responsive Cards</h2>
+      <p>A common pattern: full-width on phones, 2-up on tablets, 3-up on desktops (<code>col-12 col-sm-6 col-lg-4</code>).</p>
+    </div>
+
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Card One</h5>
+          <p class="card-text">Bootstrap cards automatically stack on narrow screens and sit side-by-side once there's room.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Card Two</h5>
+          <p class="card-text">No custom media queries needed &mdash; just the right column classes.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-sm-6 col-lg-4 mb-4">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Card Three</h5>
+          <p class="card-text">Try shrinking the window slowly and watch these reflow at each breakpoint.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Utilities demo ===== -->
+  <div id="utilities" class="row mb-5">
+    <div class="col-12 mb-3">
+      <h2>3. Responsive Utility Classes</h2>
+      <p>Bootstrap also lets you show/hide elements or change text alignment per breakpoint.</p>
+    </div>
+
+    <div class="col-12 mb-3">
+      <div class="alert alert-primary d-none d-md-block">
+        This box only appears on <strong>medium screens and up</strong> (<code>d-none d-md-block</code>). Shrink the window to hide it.
+      </div>
+      <div class="alert alert-warning d-block d-md-none">
+        This box only appears on <strong>small screens</strong> (<code>d-block d-md-none</code>). Widen the window to hide it.
+      </div>
+    </div>
+
+    <div class="col-12">
+      <p class="text-center text-md-start bg-light p-3 rounded">
+        This text is <strong>centered on phones</strong> but <strong>left-aligned from tablet size up</strong> (<code>text-center text-md-start</code>).
+      </p>
+    </div>
+  </div>
+
+  <!-- ===== Navbar/breakpoint indicator ===== -->
+  <div class="row">
+    <div class="col-12">
+      <h2>4. Flexbox Utilities</h2>
+      <p>Buttons stack vertically on very small screens and go horizontal on larger ones using <code>d-grid d-sm-flex</code>.</p>
+      <div class="d-grid d-sm-flex gap-2 justify-content-sm-center">
+        <button class="btn btn-primary" type="button">Primary Action</button>
+        <button class="btn btn-outline-secondary" type="button">Secondary</button>
+        <button class="btn btn-outline-secondary" type="button">Tertiary</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Live breakpoint badge, purely for learning purposes -->
+<span class="badge bg-dark breakpoint-badge">
+  Current breakpoint:
+  <span class="d-inline d-sm-none">XS (&lt;576px)</span>
+  <span class="d-none d-sm-inline d-md-none">SM (&ge;576px)</span>
+  <span class="d-none d-md-inline d-lg-none">MD (&ge;768px)</span>
+  <span class="d-none d-lg-inline d-xl-none">LG (&ge;992px)</span>
+  <span class="d-none d-xl-inline d-xxl-none">XL (&ge;1200px)</span>
+  <span class="d-none d-xxl-inline">XXL (&ge;1400px)</span>
+</span>
+
+<footer class="text-center">
+  <div class="container">
+    <p class="mb-0">Built with Bootstrap 5.3 &mdash; resize the browser to explore responsiveness.</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

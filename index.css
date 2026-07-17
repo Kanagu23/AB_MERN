@@ -1,0 +1,139 @@
+   
+   :root{
+    --primary-color: red;
+   }
+   
+   /* h1 {
+            color: red;
+        }
+
+    .green-heading{
+        color: green;
+    }
+    #green-heading {
+        color: green;
+    }
+
+    #italic {
+        font-style: italic;
+    } */
+
+    /* [data-type='primary']{
+        color: red;
+    } */
+    /* [href*="gmail.com"]{
+        color: brown;
+    } */
+
+    /* [href^="notepad"]{
+        color:chartreuse;
+    } */
+
+    /* [href$=".com"]{
+        color:rgb(247, 0, 255);
+    } */
+
+/* p,h5,#green-heading{
+    font-size: 50px;
+    color: blue;
+} */
+
+/* *{
+    color: red;
+} */
+
+/* [href*="gmail.com"]:hover{
+        color: brown;
+} */
+  /* h1:nth-child(1){
+    color: aqua;
+ }
+ h1::before{
+    color: red;
+ }
+li::marker{
+    color: blueviolet;
+ }
+ h1::selection{
+    background: black;
+    color: chocolate;
+ }*/
+ body{
+    @font-face {
+        font-family: custom;
+        src: url();
+    }
+    font-family: "Lato", sans-serif;
+
+ }
+
+ .grad-parent{
+    width: 200px;
+ }
+ #grad{
+     --primary-color:blue;
+    height: 30vh;
+    width: 50vw;
+    /* background-image: conic-gradient(red 45deg,yellow 45deg,green) */
+    background-image: linear-gradient(to bottom right,red,green);
+    /* background-repeat: no-repeat;
+    background-position: 50% 25%;
+    background: none; */
+    /* border:5px double blue; */
+    /* border-block: 5px solid green; */
+    /* border: 5px solid blue; */
+    border-inline: 5px solid blue;
+    /* border-radius: 50%; */
+    margin-inline: 50px;
+    /* padding: 20px; */
+    margin: 10px 0px 10px 0px;
+    background: var(--primary-color) no-repeat 50% 50%;
+ }
+
+button{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0;
+    color: aliceblue;
+    cursor: pointer;
+    transition: all .5s;
+    
+}
+button:hover{
+    background-color:rgb(25, 95, 227); ;
+}
+ /* @media not screen{
+    body{
+        padding-inline:20px ;
+        background-color: red;
+    }
+    #grad{
+        background-color: aquamarine;
+    }
+    table{
+        width: 100%;
+    }
+    video,svg{
+        display: none;
+    }
+
+ }
+ @media (min-width:768px){
+     #grad{
+        background-color:brown;
+    }
+ }
+
+ @media (min-width: 900px) and (max-width:1024px) {
+    #grad{
+        background-color:chartreuse;
+    }
+ }
+
+ @media (orientation: portrait){
+     #grad{
+        background-color:darkmagenta;
+    }
+ } */

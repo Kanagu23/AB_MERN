@@ -1,0 +1,58 @@
+.box{
+    width:100px;
+    height: 100px;
+    background-color: blue;
+    /* animation: moveBox 3s infinite; */
+}
+.circle{
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    animation:changeColor 4s infinite;
+    margin-block:10px ;
+}
+.loader{
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    animation: spin 3s infinite;
+    position: relative;
+}
+.dot{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    /* top: 0px; */
+    bottom: 0px;
+}
+@keyframes moveBox{
+    from {
+        transform:  translateX(0);
+    }
+    to{
+        transform: translateX(300px);
+    }
+}
+@keyframes changeColor {
+    0%{
+        background-color: red;
+    }
+    50%{
+        background-color: yellow;
+    }
+    100%{
+        background-color: green;
+    }
+    
+}
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(280deg);
+    }
+}

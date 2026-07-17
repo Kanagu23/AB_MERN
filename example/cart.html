@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your Cart — Kiln & Clay</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="cart-page">
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="rings">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+          <circle cx="50" cy="50" r="44"/>
+          <circle cx="50" cy="50" r="28"/>
+          <circle cx="50" cy="50" r="12"/>
+        </svg>
+      </span>
+      Kiln &amp; Clay
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Shop</a>
+      <a href="#studio">Studio</a>
+      <a href="#care">Care Guide</a>
+      <a href="cart.html" class="cart-link active">Cart · <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1 class="cart-title">Your cart</h1>
+  <p class="cart-sub">Review your pieces before they're wrapped in kraft paper and straw.</p>
+
+  <div id="cart-layout" class="cart-layout">
+    <div class="cart-items" id="cart-items"></div>
+
+    <aside class="summary">
+      <h3>Order summary</h3>
+      <div class="summary-row"><span>Subtotal</span><span id="sum-subtotal">$0.00</span></div>
+      <div class="summary-row"><span>Shipping</span><span id="sum-shipping">$0.00</span></div>
+      <div class="summary-row total"><span>Total</span><span id="sum-total">$0.00</span></div>
+      <button class="btn btn-primary" type="button" onclick="alert('This is a demo checkout — no order has been placed.')">Checkout</button>
+      <p class="note">Free returns within 14 days of the kiln leaving our shelf.</p>
+    </aside>
+  </div>
+
+  <div id="cart-empty" class="empty-cart" style="display:none;">
+    <span class="rings">
+      <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+      </svg>
+    </span>
+    <p>Your cart is empty — nothing's been thrown yet.</p>
+    <a href="index.html">Browse the collection &rarr;</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Kiln &amp; Clay — thrown, glazed, and fired by hand.</span>
+    <span>Studio hours: Tue–Sat, 10–5</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

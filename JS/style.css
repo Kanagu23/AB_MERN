@@ -1,0 +1,46 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    height: 100vh;
+    gap: 10px;
+}
+#empForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    height: fit-content;
+    background-color: #eee;
+    border-radius: 10px;
+    padding: 50px;
+}
+#empForm input{
+    padding-inline: 10px;
+    padding-block: 20px;
+}
+#empForm button{
+    background-color: blue;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+.checkInputBlock{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.err_text{
+    margin-top: 0;
+    color: red;
+    display: none;
+}
+.inputErr{
+    border:1px solid red
+}
+.active{
+    color: blue;
+    font-size: 30px;
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kiln & Clay — Handmade Stoneware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <span class="rings">
+        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6">
+          <circle cx="50" cy="50" r="44"/>
+          <circle cx="50" cy="50" r="28"/>
+          <circle cx="50" cy="50" r="12"/>
+        </svg>
+      </span>
+      Kiln &amp; Clay
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Shop</a>
+      <a href="#studio">Studio</a>
+      <a href="#care">Care Guide</a>
+      <a href="cart.html" class="cart-link">Cart · <span id="cart-count">0</span></a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="hero-eyebrow">Small-batch stoneware, thrown by hand</p>
+      <h1>Pieces that still carry the maker's fingerprints.</h1>
+      <p class="lede">Every mug, bowl, and vase is thrown on the wheel, glazed in single-oxide colorways, and fired one kiln load at a time — no two rings turn out quite the same.</p>
+      <div style="display:flex; gap:14px;">
+        <a href="#collection" class="btn btn-primary">Shop the collection</a>
+        <a href="#studio" class="btn btn-ghost">Our studio</a>
+      </div>
+    </div>
+    <svg class="hero-rings" viewBox="0 0 300 300" fill="none" stroke="currentColor">
+      <circle cx="150" cy="150" r="140" stroke-width="1.5" opacity="0.25"/>
+      <circle cx="150" cy="150" r="118" stroke-width="1.5" opacity="0.35"/>
+      <circle cx="150" cy="150" r="96" stroke-width="1.5" opacity="0.45"/>
+      <circle cx="150" cy="150" r="74" stroke-width="2" opacity="0.6"/>
+      <circle cx="150" cy="150" r="52" stroke-width="2.5" opacity="0.8"/>
+      <circle cx="150" cy="150" r="30" stroke-width="3" opacity="1"/>
+      <circle cx="150" cy="150" r="8" fill="currentColor" stroke="none"/>
+    </svg>
+  </div>
+</section>
+
+<main class="wrap" id="collection">
+  <div class="section-head">
+    <h2>The Collection</h2>
+    <span class="count">6 pieces, glazed this season</span>
+  </div>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#7f8f74">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Mug · Moss glaze</span>
+        <h3>Alder Mug</h3>
+        <p class="desc">A wide, low mug with a thumb-rest handle. Holds 12oz — built for the second cup, not the first sip.</p>
+        <div class="card-footer">
+          <span class="price">$34</span>
+          <button class="add-btn" data-id="alder-mug" data-name="Alder Mug" data-price="34">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#b5562e">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Bowl · Rust glaze</span>
+        <h3>Ember Bowl</h3>
+        <p class="desc">Deep enough for soup, shallow enough for salad. The rust glaze pools darker at the base of each piece.</p>
+        <div class="card-footer">
+          <span class="price">$46</span>
+          <button class="add-btn" data-id="ember-bowl" data-name="Ember Bowl" data-price="46">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#6b6259">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Vase · Unglazed neck</span>
+        <h3>Ridge Vase</h3>
+        <p class="desc">A tall, narrow vase with a hand-carved ridge line where the clay was pulled thinnest.</p>
+        <div class="card-footer">
+          <span class="price">$68</span>
+          <button class="add-btn" data-id="ridge-vase" data-name="Ridge Vase" data-price="68">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#7f8f74">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Plate · Moss glaze</span>
+        <h3>Furrow Plate</h3>
+        <p class="desc">A dinner plate with a shallow well and a wide rim, throwing-ringed edge to edge.</p>
+        <div class="card-footer">
+          <span class="price">$29</span>
+          <button class="add-btn" data-id="furrow-plate" data-name="Furrow Plate" data-price="29">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#b5562e">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Teapot · Rust glaze</span>
+        <h3>Hearth Teapot</h3>
+        <p class="desc">A single-serving teapot with a hand-pulled spout, cast to pour clean to the last drop.</p>
+        <div class="card-footer">
+          <span class="price">$82</span>
+          <button class="add-btn" data-id="hearth-teapot" data-name="Hearth Teapot" data-price="82">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card-media">
+        <span class="rings glaze-fill" style="--glaze:#6b6259">
+          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3">
+            <circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="30"/><circle cx="50" cy="50" r="16"/>
+          </svg>
+        </span>
+      </div>
+      <div class="card-body">
+        <span class="card-kicker">Cup · Unglazed neck</span>
+        <h3>Furrow Cup</h3>
+        <p class="desc">A small, stackable cup for espresso or spirits, left unglazed at the rim so it ages with use.</p>
+        <div class="card-footer">
+          <span class="price">$22</span>
+          <button class="add-btn" data-id="furrow-cup" data-name="Furrow Cup" data-price="22">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>Kiln &amp; Clay — thrown, glazed, and fired by hand.</span>
+    <span>Studio hours: Tue–Sat, 10–5</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
