@@ -16,11 +16,11 @@
 
 const getPost= async() => {
     try {
-        const response=await fetch("https://jsonplaceholder.typicode.com/posts/101")
+        const response=await fetch(" http://localhost:3004")
         let data="No data"
         if(response.status==200)
             data=await response.json()
-        console.log(data)
+        console.log(response)
     } catch (error) {
         console.log(error)
     }
