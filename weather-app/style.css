@@ -48,3 +48,21 @@ h1{
 .search-box button:hover{
     background: #1976d2;
 }
+.degree{
+    font-size: 3rem;
+}
+.weather-box{
+    display: none;
+    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.weather-box .icon{
+    width: 100px;
+    height: 100px;
+}
+#iconDesc{
+    text-transform: capitalize;
+}
