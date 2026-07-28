@@ -27,9 +27,12 @@ maxDeg.innerText=Wdata.main.temp_max
 }
 
 const getCurrentPos=async(pos)=>{
-    const apiUrl=`"https://api-bdc.net/data/reverse-geocode?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&localityLanguage=en&key=bdc_aea03ce91ae74526aa812db582994725`
+    const apiUrl=`https://api-bdc.net/data/reverse-geocode?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&localityLanguage=en&key=bdc_aea03ce91ae74526aa812db582994725`
     const response=await fetch(apiUrl)
-    console.log(response)
+    let cityData= await response.json()
+    console.log(
+        `Country: ${cityData.countryName}\nState: ${cityData.principalSubdivision}`
+    )
 
 }
 searchBtn.addEventListener("click",()=>{
@@ -46,7 +49,6 @@ searchBtn.addEventListener("click",()=>{
 if ("geolocation" in navigator) {
   /* geolocation is available */
  navigator.geolocation.getCurrentPosition((pos)=>{
-console.log(pos)
 getCurrentPos(pos)
   })
 } else {
