@@ -1,0 +1,17 @@
+#PRODUCTION
+        CODE PULLING
+            |
+        DELETE OLDER FILES
+            |
+        PLUGIN INSTALLATION
+            |
+        CODE BUILD -> index.html
+            |
+        (NPM START) --> running Server
+
+#DEVELOPERS
+        CODE PULLING
+            |
+        PLUGIN INSTALLATION (npm install / npm i)
+            |
+        RUN DEVELOPMENT SCRIPT CMD
