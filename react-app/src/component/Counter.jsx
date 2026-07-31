@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Counter (){
     const [count,setCount]=useState(0)
+    
     const element = React.createElement("div",null,React.createElement("h1",null,"title"),React.createElement("p",null,"paragrapg"))
 //     return (
 //   <>
@@ -16,8 +17,9 @@ function Counter (){
 //   </>
 //     )
     return <>
+    
 
-    <h1>{count}</h1>
+    <h1 className="test">{count==0?"Zero":count}</h1>
     <button onClick={
        ()=>{
          setCount(count+1)

@@ -51,3 +51,8 @@ Javascript syntax that looks like html
 JSX return only one parent element
     -use `div`
     -Fragment - Don't extra html
+    - Close Every Tag
+        -<img src="logo.png" />
+    
+onclick-->onClick
+
