@@ -1,18 +1,31 @@
+import { useState } from "react"
 import Counter from "./component/Counter"
 import ColorList from "./component/List"
+import NameInput, { UserProfile } from "./component/State"
+import CountWithEffect from "./component/CountWithEffect"
 
 function App() {
-const isLoggedIn=true
+
 let colorList=["White","Navy","Black","Brown"]
-console.log(colorList)
+ const [isLoggedIn,setIsLoggedIn]=useState(true)
+ 
 
   return (
     <>
-    {isLoggedIn?<>
+    {/* {isLoggedIn?<>
     
      <ColorList colors={colorList}  isLoggedIn counter={ <Counter/>}/>
      <ColorList />
-    </>:<h1>Please login</h1>}
+    </>:<h1>Please login</h1>} */}
+
+    {/* 04/08/2026 */}
+
+    {/* <NameInput/>
+    <UserProfile/> */}
+    <button onClick={()=>{
+      setIsLoggedIn(!isLoggedIn)
+    }}>Toggle Is Logged In</button>
+    {isLoggedIn?<CountWithEffect/>:""}
     </>
   )
 }
