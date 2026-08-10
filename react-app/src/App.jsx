@@ -5,6 +5,8 @@ import NameInput, { UserProfile } from "./component/State"
 import CountWithEffect from "./component/CountWithEffect"
 import SearchBox from "./component/SearchBox"
 import MemberList from "./component/MemberList"
+import UseRefExample from "./component/useRefExample"
+import { UserContext } from "./UserContext"
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -20,6 +22,7 @@ const DATA=[
 function App() {
 // let colorList=["White","Navy","Black","Brown"]
 //  const [isLoggedIn,setIsLoggedIn]=useState(true)
+ const [userData,setUserData]=useState(DATA)
 const [searchTerm,setSearchTerm] = useState("")
 
 const handleSearch=(e)=>{
@@ -44,8 +47,13 @@ setSearchTerm(searchValue)
       setIsLoggedIn(!isLoggedIn)
     }}>Toggle Is Logged In</button>
     {isLoggedIn?<CountWithEffect/>:""} */}
-    <SearchBox handleSearch={handleSearch}/>
-    <MemberList members={DATA} searchTerm={searchTerm}/>
+    <UserContext.Provider value={{userData,setUserData,members:DATA}}>
+        <SearchBox handleSearch={handleSearch}/>
+        <MemberList  searchTerm={searchTerm}/>
+    </UserContext.Provider>
+  
+
+    {/* <UseRefExample/> */}
     </>
   )
 }

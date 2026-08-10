@@ -104,3 +104,6 @@ function App(){
      <statements>
     },[dependencyArray])```
 
+
+# 3. Hooks : useRef
+# 4. Hooks : useContext()

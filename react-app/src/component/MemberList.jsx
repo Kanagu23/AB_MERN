@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import MemberCard from "./MemberCard"
+import { UserContext } from "../UserContext"
 
-const MemberList=({members,searchTerm})=>{
-    const [userData,setUserData]=useState(members)
+const MemberList=({searchTerm})=>{
+    const {userData,setUserData,members}=useContext(UserContext)
     const handleDataFilter=()=>{
       
         if(searchTerm=="" || !searchTerm){
