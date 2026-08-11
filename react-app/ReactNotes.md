@@ -107,3 +107,15 @@ function App(){
 
 # 3. Hooks : useRef
 # 4. Hooks : useContext()
+# 5. Hooks : useReducer
+    const [state,distpatch]=useReducer(reducer,initialState)
+
+    example: const [count,setCount]=useState(0)
+    {
+        userName:
+        age:
+        email:
+        phone:
+        isLogged:
+    }
+    

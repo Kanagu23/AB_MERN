@@ -7,6 +7,8 @@ import SearchBox from "./component/SearchBox"
 import MemberList from "./component/MemberList"
 import UseRefExample from "./component/useRefExample"
 import { UserContext } from "./UserContext"
+import UserReducerExample from "./component/UseReducerExample"
+import Login from "./component/UseReducerExample2"
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -47,13 +49,15 @@ setSearchTerm(searchValue)
       setIsLoggedIn(!isLoggedIn)
     }}>Toggle Is Logged In</button>
     {isLoggedIn?<CountWithEffect/>:""} */}
-    <UserContext.Provider value={{userData,setUserData,members:DATA}}>
+    {/* <UserContext.Provider value={{userData,setUserData,members:DATA}}>
         <SearchBox handleSearch={handleSearch}/>
         <MemberList  searchTerm={searchTerm}/>
     </UserContext.Provider>
-  
+   */}
 
     {/* <UseRefExample/> */}
+    {/* <UserReducerExample/> */}
+    <Login/>
     </>
   )
 }
