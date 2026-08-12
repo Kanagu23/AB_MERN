@@ -14,7 +14,7 @@ const CountWithEffect =()=>{
     }, [])
     
     useEffect(() => {
-     console.log(count)
+    //  console.log(count)
     },[name])
 
     return <>
