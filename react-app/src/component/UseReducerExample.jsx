@@ -18,7 +18,7 @@ const reducer=(state,action)=>{
 }
 
 const UserReducerExample=()=>{
-
+console.log("h")
     const [count,dispatch]=useReducer(reducer,0)
 
     return (<>
