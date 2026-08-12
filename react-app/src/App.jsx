@@ -9,6 +9,7 @@ import UseRefExample from "./component/useRefExample"
 import { UserContext } from "./UserContext"
 import UserReducerExample from "./component/UseReducerExample"
 import Login from "./component/UseReducerExample2"
+import UseMemoExample from "./component/UseMemo"
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -57,7 +58,8 @@ setSearchTerm(searchValue)
 
     {/* <UseRefExample/> */}
     {/* <UserReducerExample/> */}
-    <Login/>
+    {/* <Login/> */}
+    <UseMemoExample/>
     </>
   )
 }
