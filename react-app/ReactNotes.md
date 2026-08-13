@@ -119,3 +119,11 @@ function App(){
         isLogged:
     }
     
+# 6. Hooks : useMemo
+ Render
+  ↓
+Did search/category/sort change?
+  │
+  ├── NO → use previous result
+  │
+  └── YES → filter + sort

@@ -1,15 +1,17 @@
-import { useState } from "react"
-import Counter from "./component/Counter"
-import ColorList from "./component/List"
-import NameInput, { UserProfile } from "./component/State"
-import CountWithEffect from "./component/CountWithEffect"
-import SearchBox from "./component/SearchBox"
-import MemberList from "./component/MemberList"
-import UseRefExample from "./component/useRefExample"
-import { UserContext } from "./UserContext"
-import UserReducerExample from "./component/UseReducerExample"
-import Login from "./component/UseReducerExample2"
-import UseMemoExample from "./component/UseMemo"
+// import { useState } from "react"
+// import Counter from "./component/Counter"
+// import ColorList from "./component/List"
+// import NameInput, { UserProfile } from "./component/State"
+// import CountWithEffect from "./component/CountWithEffect"
+// import SearchBox from "./component/SearchBox"
+// import MemberList from "./component/MemberList"
+// import UseRefExample from "./component/useRefExample"
+// import { UserContext } from "./UserContext"
+// import UserReducerExample from "./component/UseReducerExample"
+// import Login from "./component/UseReducerExample2"
+// import UseMemoExample from "./component/UseMemo"
+// import useFetch from "./useFetch"
+import { Button, DatePicker, Flex } from 'antd';
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -25,13 +27,15 @@ const DATA=[
 function App() {
 // let colorList=["White","Navy","Black","Brown"]
 //  const [isLoggedIn,setIsLoggedIn]=useState(true)
- const [userData,setUserData]=useState(DATA)
-const [searchTerm,setSearchTerm] = useState("")
+//  const [userData,setUserData]=useState(DATA)
+// const [searchTerm,setSearchTerm] = useState("")
+// // const [data]=useFetch("https://jsonplaceholder.typicode.com/todos")
+// // console.log(data)
 
-const handleSearch=(e)=>{
-const searchValue=e.target.value
-setSearchTerm(searchValue)
-}
+// const handleSearch=(e)=>{
+// const searchValue=e.target.value
+// setSearchTerm(searchValue)
+// }
  
 
   return (
@@ -59,7 +63,20 @@ setSearchTerm(searchValue)
     {/* <UseRefExample/> */}
     {/* <UserReducerExample/> */}
     {/* <Login/> */}
-    <UseMemoExample/>
+    {/* <UseMemoExample/> */}
+
+
+    <Flex gap="small" wrap>
+      <Button type="primary" size="small" loading>
+          Loading
+        </Button>
+    <Button type="primary">Primary Button</Button>
+    <Button>Default Button</Button>
+    <Button type="dashed">Dashed Button</Button>
+    <Button type="text">Text Button</Button>
+    <Button type="link">Link Button</Button>
+    <DatePicker/>
+  </Flex>
     </>
   )
 }

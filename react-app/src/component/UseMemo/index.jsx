@@ -40,13 +40,11 @@ const products = [
 ];
 
 function UseMemoExample() {
-
-
   const [search, setSearch] = useState("");
-
   const [category, setCategory] =useState("All");
-
   const [sort, setSort] =useState("default");
+  
+
 
   const filteredProducts = useMemo(() => {
 
