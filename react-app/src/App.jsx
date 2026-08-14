@@ -12,6 +12,8 @@
 // import UseMemoExample from "./component/UseMemo"
 // import useFetch from "./useFetch"
 import { Button, DatePicker, Flex } from 'antd';
+import LoginForm from './component/ControlledComponents';
+import UnControlledLoginForm from './component/UnControlled';
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -66,7 +68,7 @@ function App() {
     {/* <UseMemoExample/> */}
 
 
-    <Flex gap="small" wrap>
+    {/* <Flex gap="small" wrap>
       <Button type="primary" size="small" loading>
           Loading
         </Button>
@@ -76,7 +78,9 @@ function App() {
     <Button type="text">Text Button</Button>
     <Button type="link">Link Button</Button>
     <DatePicker/>
-  </Flex>
+  </Flex> */}
+  {/* <LoginForm/> */}
+  <UnControlledLoginForm/>
     </>
   )
 }

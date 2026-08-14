@@ -127,3 +127,10 @@ Did search/category/sort change?
   ├── NO → use previous result
   │
   └── YES → filter + sort
+
+
+# FORMS:
+    1. Controlled Components
+    2. UnControlled Components
+# FORMS CONTROLLED COMPONENTS
+ Form element whose value is controlled by states
