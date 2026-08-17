@@ -14,6 +14,7 @@
 import { Button, DatePicker, Flex } from 'antd';
 import LoginForm from './component/ControlledComponents';
 import UnControlledLoginForm from './component/UnControlled';
+import RegisterForm from './component/RegisterForm';
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -80,7 +81,8 @@ function App() {
     <DatePicker/>
   </Flex> */}
   {/* <LoginForm/> */}
-  <UnControlledLoginForm/>
+  {/* <UnControlledLoginForm/> */}
+  <RegisterForm/>
     </>
   )
 }
