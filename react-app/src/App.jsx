@@ -15,6 +15,8 @@ import { Button, DatePicker, Flex } from 'antd';
 import LoginForm from './component/ControlledComponents';
 import UnControlledLoginForm from './component/UnControlled';
 import RegisterForm from './component/RegisterForm';
+import DataTable from './component/Datatable';
+import Gallery from './component/Gallery';
 const DATA=[
   {name:"AB",role:"Software Developer",id:123},
   {name:"Kanagu",role:"Team Lead",id:456},
@@ -26,6 +28,64 @@ const DATA=[
   {name:"Subash",role:"Full stack Developer",id:105}
 
 ]
+const users = [
+  {
+    id: 1,
+    name: "John Doe",
+    email: "john@example.com",
+    role: "Admin",
+    status: "Active",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    email: "jane@example.com",
+    role: "User",
+    status: "Inactive",
+  },
+  {
+    id: 3,
+    name: "Mike Johnson",
+    email: "mike@example.com",
+    role: "User",
+    status: "Active",
+  },
+];
+
+const columns = [
+  {
+    key: "name",
+    label: "Name",
+    sortable: true,
+  },
+  {
+    key: "email",
+    label: "Email",
+    sortable: true,
+  },
+  {
+    key: "role",
+    label: "Role",
+    sortable: true,
+  },
+  {
+    key: "status",
+    label: "Status",
+    sortable: true,
+    render: (value) => (
+      <span
+        className={
+          value === "Active"
+            ? "status-active"
+            : "status-inactive"
+        }
+      >
+        {value}
+      </span>
+    ),
+  },
+];
+
 
 function App() {
 // let colorList=["White","Navy","Black","Brown"]
@@ -82,7 +142,14 @@ function App() {
   </Flex> */}
   {/* <LoginForm/> */}
   {/* <UnControlledLoginForm/> */}
-  <RegisterForm/>
+  {/* <RegisterForm/> */}
+     {/* <DataTable
+      data={users}
+      columns={columns}
+      pageSize={10}
+      selectable={true}
+    /> */}
+    <Gallery/>
     </>
   )
 }
