@@ -74,3 +74,35 @@ An event is  an action
 node server.js --> Initialize Modules --> Execute Code --> Register Events -- > Event Loop Starts --> Application wait
 # Creating a Node server
 **Server** : A program that receives req and sends res
+
+# Request and Response
+1. Request from client
+2. Response from server
+
+Data sent by client
+    1. req.url
+    2. req.method
+Data sent by server
+    1.res.write("hello")
+    2.res.end();
+# Routing
+Routing decides which code should execute for specific url
+HTTP METHOD + URL PATH + HANDLER
+
+Example:
+GET + /users + getUsers()
+
+GET -> Read Data
+POST -> Create / Write Data
+PUT -> Replace/Update Data
+PATCH -> Partially update Data
+DELETE -> Delete Data
+
+STATUS CODE
+200 - OK
+201 - Created
+400 - Bad request
+401 - Unauthorized
+403 - Forbidden
+404 - Not Found
+500 - Internal Server Error

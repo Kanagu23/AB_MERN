@@ -10,7 +10,7 @@
 // import UserReducerExample from "./component/UseReducerExample"
 // import Login from "./component/UseReducerExample2"
 // import UseMemoExample from "./component/UseMemo"
-// import useFetch from "./useFetch"
+import useFetch from "./useFetch"
 import { Button, DatePicker, Flex } from 'antd';
 import LoginForm from './component/ControlledComponents';
 import UnControlledLoginForm from './component/UnControlled';
@@ -92,8 +92,8 @@ function App() {
 //  const [isLoggedIn,setIsLoggedIn]=useState(true)
 //  const [userData,setUserData]=useState(DATA)
 // const [searchTerm,setSearchTerm] = useState("")
-// // const [data]=useFetch("https://jsonplaceholder.typicode.com/todos")
-// // console.log(data)
+const [data]=useFetch("http://localhost:3000/")
+console.log(data)
 
 // const handleSearch=(e)=>{
 // const searchValue=e.target.value
