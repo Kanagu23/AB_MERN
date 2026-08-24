@@ -106,3 +106,30 @@ STATUS CODE
 403 - Forbidden
 404 - Not Found
 500 - Internal Server Error
+
+## HEADERS
+#### Request headers
+    1. Accept
+    2. Content-Type
+    3. Content-Length
+    4. Authorization
+    5. Cookie
+    6. Origin
+    7. Cache-Control
+
+#### Response headers
+    res.setHeader("Content-Type","text/plain") // text/htm , application/json, 
+    res.writeHead(200,{"Content-Type":"application/json"});
+    res.setHeader("X-App-Name","My node app")
+
+    1. Content-Type
+    2. Content-Length
+    3. Cache-Control
+    4. Set-Cookie
+    5. Location
+    6. Access-Control-Allow-Origin
+    7. Access-Control-Allow-Methods
+    8. Access-Control-Allow-Headers
+
+#### CORS
+    res.setHeader("Access-Control-Allow-Origin","*")

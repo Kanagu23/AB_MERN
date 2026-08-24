@@ -92,7 +92,7 @@ function App() {
 //  const [isLoggedIn,setIsLoggedIn]=useState(true)
 //  const [userData,setUserData]=useState(DATA)
 // const [searchTerm,setSearchTerm] = useState("")
-const [data]=useFetch("http://localhost:3000/")
+const [data]=useFetch("https://jsonplaceholder.typicode.com/todos")
 console.log(data)
 
 // const handleSearch=(e)=>{
