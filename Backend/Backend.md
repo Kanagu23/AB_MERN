@@ -133,3 +133,16 @@ STATUS CODE
 
 #### CORS
     res.setHeader("Access-Control-Allow-Origin","*")
+
+# Express JS
+app.METHOD(PATH, HANDLER);
+example: 
+app.get("/",(req,res)=>{
+    res.send("HELLO WORLD!")    // HANDLER
+})
+
+app --> express application
+.get() --> HTTP GET METHOD
+"/" --> URL PATH
+(req,res) --> Request + Response
+res.send --> Send response
