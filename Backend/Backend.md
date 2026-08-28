@@ -146,3 +146,67 @@ app --> express application
 "/" --> URL PATH
 (req,res) --> Request + Response
 res.send --> Send response
+
+
+
+
+
+# DATABASE
+ Database = Organized permanent storage for application data
+ CRUD - Create, Read, Update, Delete
+
+### Database in web application
+      req                   API                             Database Query              Result
+ User ---> React / Browser -----> Node js --> Express .js ------------------> Mongo DB -------> Express.js ---> Browser
+
+
+ User Clicks: "Show Students" --> GET /students -->Express-->Mongo DB-->Students Record -->Express -->JsonRes-->Browser
+
+ ### DBMS - Database Management System
+ - Mysql
+ - Oracle
+ - MongoDB
+ - Postgre SQL
+
+
+ ### Types in DB
+    - SQL :Relational (Table Format)
+    - NoSQL :Non-Relational (Document)
+1. SQL Database
+    - MySQL
+    - PostgreSQL
+    - Oracle
+    - SQL server
+2. NoSQL Database
+    - MongoDB
+    - Redis
+    - Cassandra
+    - DynamoDB
+{
+    "_id":1,
+    "name":"AB",
+}
+
+### SQL vs MONGODB
+1. Table - Collection
+2. Row - Document
+3. Column - Field
+4. SQL Query - MongoDB Query
+5. Primary Key - _id
+
+Example
+students table
+ ID  | Name  | Age
+ 1   | AB    | 23
+
+ MongoDB
+ students
+ {
+    _id:1,
+    name:"AB"
+ }
+  {
+    _id:2,
+    name:"Kanagu"
+ }
+ 
