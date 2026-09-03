@@ -185,6 +185,11 @@ res.send --> Send response
 {
     "_id":1,
     "name":"AB",
+    product:[1,2,3,4],
+    address:{
+        city:"",
+        state:"",
+    }
 }
 
 ### SQL vs MONGODB
@@ -199,6 +204,8 @@ students table
  ID  | Name  | Age
  1   | AB    | 23
 
+SELECT * FROM  students;
+
  MongoDB
  students
  {
@@ -210,3 +217,41 @@ students table
     name:"Kanagu"
  }
  
+ Students.find()
+
+### BSON - Binary Json
+DataTypes:
+    1. ObjectId
+    2. Date,
+    3. Binary Data,
+    4. Decimal
+Every MongoDB document normally has a unique _id
+ {
+    _id:ObjectId(1223231212121.....),
+    name:"Kanagu"
+ }
+
+ #### How to start MongoDB - CMDLine
+ 1. Open CMD in Administrator mode
+ 2. Run `net start MongoDB`
+ 3. mongosh
+
+### Check Current Database
+    `db`
+### Create / Switch Database
+    use <databaseName>
+### Show All Database
+    `show dbs`
+### Show Collections
+    `show collections`
+### Create Collections
+    `db.createCollection("products")`
+### Insert Document
+    `db.products.insertOne({name:"laptop",price:50000,stock:10})`
+### View the document
+    `db.product.find()`
+    `db.product.findOne()`
+### Update
+    `db.products.updateOne()`
+### Delete 
+    `db.products.deleteOne()`
