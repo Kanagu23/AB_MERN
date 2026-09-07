@@ -255,3 +255,51 @@ Every MongoDB document normally has a unique _id
     `db.products.updateOne()`
 ### Delete 
     `db.products.deleteOne()`
+### Comparison Operators
+    - $gt -> greater than
+        `db.products.find({price:{$gt:50000}})`
+    - $gte -> greater than or equal
+        `db.products.find({price:{$gte:58999}})`
+    - $lt -> less than
+        `db.products.find({price:{$lt:50000}})`
+    - $lte -> less than or equal
+        `db.products.find({price:{$lte:50000}})`
+    - $eq -> equal
+        `db.products.find({price:{$eq:4000}})`
+    - range query
+        `db.products.find({price:{$gte:10000,$lte:30000}})`
+    - $ne -> not equal
+        `db.products.find({price:{$ne:4999}})`
+    - $in -> products with these prices
+        `db.products.find({price:{$in:[4999,10000,40000]}})`
+    - $nin -> not include
+        `db.products.find({price:{$nin:[4999,10000,40000]}})`
+### Logical Operators
+    - or, and, nor, not
+    
+    db.products.find({
+        $or:[
+            {discount:{$lt:15}},
+            {category:{$eq:"Footwear"}}
+        ]
+    })
+### Quering
+    - Array
+        `db.products.find({tags:"sports"})`
+    - Nested fields
+        `db.products.find({"specifications.size":"10"})`
+### Projection
+    Get only specific fields
+        `db.products.find({},{name:1,_id:0,price:1})`
+        `[
+            { name: 'iPhone 15', price: 69999 },
+            { name: 'Galaxy S24', price: 74999 },
+            { name: 'MacBook Air M3', price: 114999 },
+            { name: 'Dell Inspiron 15', price: 58999 },
+            { name: 'Sony WH-1000XM5', price: 29999 },
+            { name: 'AirPods Pro 2', price: 24999 },
+            { name: 'Nike Air Max', price: 8999 },
+            { name: 'Adidas Ultraboost', price: 10999 },
+            { name: "Levi's Denim Jacket", price: 4999 },
+            { name: 'Samsung 55 inch 4K TV', price: 64999 }
+        ]`
