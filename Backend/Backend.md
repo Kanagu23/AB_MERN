@@ -253,8 +253,17 @@ Every MongoDB document normally has a unique _id
     `db.product.findOne()`
 ### Update
     `db.products.updateOne()`
+    `db.products.updateMany({category:"Footwear"},{$set:{discount:25}})`
+    -$inc -> Increament
+        `db.products.updateOne({brand: 'Nike'},{$inc:{stock:5}})`
+    -decrement
+        `db.products.updateOne({brand: 'Nike'},{$inc:{stock:-5}})`
+    $unset -> remove field
+        `db.products.updateOne({brand: 'Nike'},{$unset:{temp:""}})`
+    
 ### Delete 
     `db.products.deleteOne()`
+    `db.products.deleteMany({$or:[{price:50000},{price:30000}]})`
 ### Comparison Operators
     - $gt -> greater than
         `db.products.find({price:{$gt:50000}})`
