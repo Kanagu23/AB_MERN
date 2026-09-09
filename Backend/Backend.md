@@ -312,3 +312,50 @@ Every MongoDB document normally has a unique _id
             { name: "Levi's Denim Jacket", price: 4999 },
             { name: 'Samsung 55 inch 4K TV', price: 64999 }
         ]`
+
+### Aggregate
+
+db.collection.aggregate([
+    {stage1},{stage2},{stage3}
+])
+
+db.products.aggregate([
+    {
+        $match:{
+             category: 'Computers'
+        }
+    },
+    {
+        $sort:{
+            price:1
+        }
+    },{
+        $limit:1
+    },{
+        $project:{
+            name:1,category:1,price:1,_id:0
+        }
+    }
+])
+
+db.products.aggregate([
+    
+    {
+        $group:{
+            _id:null,
+            maxPrice:{$max:"$price"}
+        }
+    }
+])
+db.products.aggregate([
+    {
+        $group:{
+            _id:"$category",
+            maxPrice:{$max:"$price"},
+            minPrice:{$min:"$price"},
+            Total:{$sum:"$price"},
+            Average:{$avg:"$price"},
+            count:{$sum:1}
+        }
+    }
+])
