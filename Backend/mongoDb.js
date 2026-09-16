@@ -33,6 +33,7 @@ const init=async()=>{
 const productDB=await mongoose.createConnection("mongodb://localhost:27017/products").asPromise()
 const testDB=await mongoose.createConnection("mongodb://localhost:27017/test").asPromise()
 const productCollection= productDB.collection("products")
+const orderCollection= productDB.collection("orders")
 const usersCollection=testDB.collection("users")
 
 console.log(await productCollection.find({ name: 'Sony WH-1000XM5'}).toArray())
