@@ -92,8 +92,22 @@ function App() {
 //  const [isLoggedIn,setIsLoggedIn]=useState(true)
 //  const [userData,setUserData]=useState(DATA)
 // const [searchTerm,setSearchTerm] = useState("")
-const [data]=useFetch("http://localhost:4000/about")
+// const [data]=useFetch("http://localhost:4000/about")
+const [data]=useFetch("http://localhost:5000/api/products")
 console.log(data)
+
+fetch("http://localhost:5000/api/products/",{
+  method:"POST",
+  headers:{
+    "Content-Type":"application/json"
+  },
+  body:JSON.stringify({
+    name:"Apple Mobile",
+    price:200000,
+    category:"Mobile",
+    stock:20
+  })
+}).then((res)=>res.json()).then((data)=>{console.log(data)}).catch(err=>{console.log("ERR",err)})
 
 // const handleSearch=(e)=>{
 // const searchValue=e.target.value

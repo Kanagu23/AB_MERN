@@ -364,4 +364,58 @@ db.products.aggregate([
     - Mongoose (ODM)
     - use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 ### MVC Run CMD
-    AB_MERN\Backend\inventoryManagement>node --watch src/server.js
+    AB_MERN\Backend\inventoryManagement> node --watch src/server.js
+
+    
+### Replica
+Server 1 - primary
+server 2 - secondary
+server 3 - secondary
+
+
+
+serevr 1 - X  
+server 2 - primary
+server 3 - secondary
+
+
+
+
+server 1 - secondary
+server 2 - primary
+server 3 - secondary
+
+
+server 1
+A
+B
+C
+
+-----X----
+D
+E
+F
+G
+-----server 1 -----
+
+mongondb oplog
+
+server 2 primary
+    |
+    |   oplog operations
+    |
+server 1 secondary
+
+D
+E
+F
+G
+
+Now server 1 has
+A
+B
+C
+D
+E
+F
+G
