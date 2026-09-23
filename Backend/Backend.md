@@ -419,3 +419,7 @@ D
 E
 F
 G
+
+### .ENV (.env) environment variables
+USERNAME="AB"
+HOST_URI=""
