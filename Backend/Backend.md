@@ -485,9 +485,12 @@ db.createView(
         $function:
                {
                   body: function(price) {
+                    if(price===65999)
                      return price*30
+                    else
+                     return price
                   },
-                  args: [ "$price" ],
+                  args: [ "$productDetails.price" ],
                   lang: "js"
                }
             },
