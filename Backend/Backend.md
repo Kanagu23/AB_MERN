@@ -423,3 +423,84 @@ G
 ### .ENV (.env) environment variables
 USERNAME="AB"
 HOST_URI=""
+
+### Mongodb View
+A view in MongoDB is a queryable, virtual collection whose contents are defined by an aggregation pipeline run against another collection (or another view). It doesn't store its own data — every time you query it, MongoDB computes the result from the underlying collection on the fly. Views are read-only: you can't insert, update, or delete documents directly on a view.
+
+They're useful for things like exposing a filtered or reshaped version of your data (e.g., hiding a field, computing a derived value) without duplicating storage.
+
+#### Syntax:  db.createView(<view name>, <source collection>, <aggregation pipeline>, <options>)
+use products
+
+db.createView(
+  "productInventoryView",
+  "products",
+  [
+    { $match: { quantity: { $gt: 0 } } },
+    {
+      $addFields: {
+        inventoryValue: { $multiply: ["$price", "$quantity"] }
+      }
+    },
+    {
+      $project: {
+        name: 1,
+        price: 1,
+        quantity: 1,
+        inventoryValue: 1
+      }
+    }
+  ]
+)
+
+#### Query View
+db.productInventoryView.find().sort({ inventoryValue: -1 })
+
+
+#### Notes
+// List all views in the current database
+db.getCollectionInfos({ type: "view" })
+
+// Drop a view
+db.productInventoryView.drop()
+
+
+
+db.createView(
+  "OrdersView",
+  "orders",
+  [
+   {
+    $lookup:{
+        from:"products",
+        localField:"productID",
+        foreignField:"_id",
+        as:"productDetails"
+    }
+   },
+    {
+      $project: {
+        "productDetails.name": 1,
+       "productDetails.price":  { 
+        $function:
+               {
+                  body: function(price) {
+                     return price*30
+                  },
+                  args: [ "$price" ],
+                  lang: "js"
+               }
+            },
+        "productDetails.quantity":{
+             $cond:{
+            if:{$eq:["$productDetails.quantity",50]},
+            then:"Yes",
+            else:"No"
+        }
+        }
+       
+       
+      }
+    }
+  ]
+)
